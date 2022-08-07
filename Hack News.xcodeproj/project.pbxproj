@@ -11,6 +11,10 @@
 		84B9B4212879E02300CC020A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9B4202879E02300CC020A /* ContentView.swift */; };
 		84B9B4232879E02900CC020A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B9B4222879E02900CC020A /* Assets.xcassets */; };
 		84B9B4262879E02900CC020A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B9B4252879E02900CC020A /* Preview Assets.xcassets */; };
+		84B9B42E2879EAB200CC020A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9B42D2879EAB200CC020A /* NetworkManager.swift */; };
+		84B9B430287B66BC00CC020A /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9B42F287B66BC00CC020A /* PostData.swift */; };
+		84B9B433287C82E200CC020A /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9B432287C82E200CC020A /* DetailView.swift */; };
+		84B9B435287C87FE00CC020A /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9B434287C87FE00CC020A /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,11 @@
 		84B9B4202879E02300CC020A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		84B9B4222879E02900CC020A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84B9B4252879E02900CC020A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		84B9B42D2879EAB200CC020A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		84B9B42F287B66BC00CC020A /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		84B9B432287C82E200CC020A /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		84B9B434287C87FE00CC020A /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		84B9B436287C8E7C00CC020A /* Hack News.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Hack News.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +60,10 @@
 		84B9B41D2879E02300CC020A /* Hack News */ = {
 			isa = PBXGroup;
 			children = (
+				84B9B436287C8E7C00CC020A /* Hack News.entitlements */,
+				84B9B431287C829600CC020A /* Views */,
+				84B9B42C2879EA8500CC020A /* Models */,
 				84B9B41E2879E02300CC020A /* Hack_NewsApp.swift */,
-				84B9B4202879E02300CC020A /* ContentView.swift */,
 				84B9B4222879E02900CC020A /* Assets.xcassets */,
 				84B9B4242879E02900CC020A /* Preview Content */,
 			);
@@ -65,6 +76,25 @@
 				84B9B4252879E02900CC020A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		84B9B42C2879EA8500CC020A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				84B9B42D2879EAB200CC020A /* NetworkManager.swift */,
+				84B9B42F287B66BC00CC020A /* PostData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		84B9B431287C829600CC020A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				84B9B4202879E02300CC020A /* ContentView.swift */,
+				84B9B432287C82E200CC020A /* DetailView.swift */,
+				84B9B434287C87FE00CC020A /* WebView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +167,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84B9B42E2879EAB200CC020A /* NetworkManager.swift in Sources */,
+				84B9B430287B66BC00CC020A /* PostData.swift in Sources */,
 				84B9B4212879E02300CC020A /* ContentView.swift in Sources */,
+				84B9B435287C87FE00CC020A /* WebView.swift in Sources */,
+				84B9B433287C82E200CC020A /* DetailView.swift in Sources */,
 				84B9B41F2879E02300CC020A /* Hack_NewsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,9 +300,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Hack News/Hack News.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Hack News/Preview Content\"";
+				DEVELOPMENT_TEAM = C63M9DQGT7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -284,6 +320,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tushar.Hack-News";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -295,9 +332,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Hack News/Hack News.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Hack News/Preview Content\"";
+				DEVELOPMENT_TEAM = C63M9DQGT7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -313,6 +352,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tushar.Hack-News";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
